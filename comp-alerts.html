@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Component — Alerts" subtitle="Success / warning / error / info" viewport="700x240" -->
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.min.js"></script>
+<style>
+  body{margin:0;background:#fff;padding:22px 28px;color:var(--fg-1);display:flex;flex-direction:column;gap:12px}
+  .alert{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:var(--radius-sm);font-family:var(--font-ui);font-size:13px}
+  .alert svg{flex:none;stroke-width:2}
+  .s{background:var(--exito-bg);color:#0c5b44}.s svg{color:var(--exito)}
+  .w{background:var(--alerta-bg);color:#7a5c00}.w svg{color:var(--alerta)}
+  .e{background:var(--error-bg);color:#8c0a06}.e svg{color:var(--error)}
+  .i{background:var(--azul-claro);color:var(--azul-entel)}.i svg{color:var(--azul-entel)}
+  strong{font-family:var(--font-display);font-weight:700}
+</style></head><body>
+  <div class="alert s"><i data-lucide="check-circle" width="20" height="20"></i><span><strong>Listo.</strong> Tu plan quedó activo, te enviamos la confirmación.</span></div>
+  <div class="alert w"><i data-lucide="alert-triangle" width="20" height="20"></i><span><strong>Atención.</strong> Tu factura vence en 3 días.</span></div>
+  <div class="alert e"><i data-lucide="x-circle" width="20" height="20"></i><span><strong>Algo salió mal.</strong> Revisa los datos e inténtalo de nuevo.</span></div>
+  <div class="alert i"><i data-lucide="info" width="20" height="20"></i><span><strong>Tip.</strong> Con Entel Days todos tus planes te convienen más.</span></div>
+  <script>lucide.createIcons();</script>
+</body></html>

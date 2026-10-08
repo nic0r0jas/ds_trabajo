@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Component — Buttons" subtitle="Primary, secondary, ghost, states" viewport="700x210" -->
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:#fff;padding:26px 28px;color:var(--fg-1)}
+  .grid{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{font-family:var(--font-display);font-weight:600;font-size:15px;border:none;border-radius:var(--radius-pill);padding:13px 26px;cursor:pointer}
+  .primary{background:var(--azul-entel);color:#fff}
+  .primary.hover{background:#0024cc}
+  .secondary{background:#fff;color:var(--azul-entel);box-shadow:inset 0 0 0 1.5px var(--azul-entel)}
+  .ghost{background:transparent;color:var(--azul-entel)}
+  .disabled{background:var(--gris-200);color:#fff;cursor:not-allowed}
+  .lab{font-family:var(--font-ui);font-size:11px;color:var(--gris-600);width:100%;margin:4px 0 2px}
+</style></head><body>
+  <div class="lab">Primario · estados</div>
+  <div class="grid">
+    <button class="btn primary">Contrata tu plan</button>
+    <button class="btn primary hover">Hover</button>
+    <button class="btn disabled">Disabled</button>
+  </div>
+  <div class="lab">Secundario · fantasma</div>
+  <div class="grid">
+    <button class="btn secondary">Descubre más</button>
+    <button class="btn ghost">Ver detalles</button>
+  </div>
+</body></html>

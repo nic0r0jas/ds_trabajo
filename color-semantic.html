@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Color — Feedback" subtitle="Éxito · Alerta · Error (semáforo)" viewport="700x230" -->
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:#fff;padding:24px 28px;color:var(--fg-1)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .sw{border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--line)}
+  .chip{height:64px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:15px}
+  .tint{height:34px}
+  .meta{padding:8px 12px}
+  .nm{font-family:var(--font-display);font-weight:700;font-size:14px}
+  .hex{font-family:var(--font-ui);font-size:11px;color:var(--gris-600);margin-top:2px}
+</style></head><body>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:var(--exito);color:#fff">Éxito</div><div class="tint" style="background:var(--exito-bg)"></div><div class="meta"><div class="nm">Verde</div><div class="hex">#22BE8D · bg #E6FFFA</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--alerta);color:#3a2e00">Alerta</div><div class="tint" style="background:var(--alerta-bg)"></div><div class="meta"><div class="nm">Amarillo</div><div class="hex">#F5B207 · bg #FEF9EC</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--error);color:#fff">Error</div><div class="tint" style="background:var(--error-bg)"></div><div class="meta"><div class="nm">Rojo</div><div class="hex">#DB110A · bg #FEF4F3</div></div></div>
+  </div>
+  <div style="font-family:var(--font-ui);font-size:11px;color:var(--gris-600);margin-top:12px">Semáforo de feedback — solo para mensajes de estado al usuario</div>
+</body></html>

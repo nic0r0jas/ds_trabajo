@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Component — Badges & Chips" subtitle="Badges + filter chips" viewport="700x200" -->
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:#fff;padding:24px 28px;color:var(--fg-1)}
+  .lab{font-family:var(--font-ui);font-size:11px;color:var(--gris-600);margin:0 0 8px}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+  .badge{font-family:var(--font-ui);font-weight:600;font-size:12px;padding:5px 12px;border-radius:var(--radius-pill)}
+  .b-azul{background:var(--azul-claro);color:var(--azul-entel)}
+  .b-verde{background:var(--verde-eco);color:#03372a}
+  .b-naranjo{background:var(--naranjo-entel);color:#fff}
+  .b-neg{background:var(--azul-negocios);color:#fff}
+  .b-line{background:#fff;color:var(--gris-600);box-shadow:inset 0 0 0 1px var(--gris-200)}
+  .chip{font-family:var(--font-ui);font-size:13px;padding:8px 14px;border-radius:var(--radius-pill);background:#fff;box-shadow:inset 0 0 0 1.5px var(--gris-200);color:var(--fg-1);cursor:pointer}
+  .chip.on{background:var(--azul-entel);color:#fff;box-shadow:none}
+</style></head><body>
+  <p class="lab">Badges</p>
+  <div class="row">
+    <span class="badge b-azul">5G</span>
+    <span class="badge b-verde">33% dcto</span>
+    <span class="badge b-naranjo">Nuevo</span>
+    <span class="badge b-neg">Empresas</span>
+    <span class="badge b-line">Agotado</span>
+  </div>
+  <p class="lab">Chips / filtros (selección por contraste)</p>
+  <div class="row">
+    <span class="chip on">Todos</span>
+    <span class="chip">Planes</span>
+    <span class="chip">Equipos</span>
+    <span class="chip">Hogar</span>
+  </div>
+</body></html>

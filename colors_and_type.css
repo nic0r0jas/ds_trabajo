@@ -1,0 +1,191 @@
+/* ============================================================
+   ENTEL DESIGN SYSTEM — Colors & Type
+   Source: Entel Manual de Marca 2022 (08/2023)
+   Fonts: Barlow (display/titles, self-hosted in fonts/), Inter (small UI, Google Fonts).
+   ============================================================ */
+
+/* Inter (small UI) stays on Google Fonts — not uploaded. Barlow is self-hosted below. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---- Barlow — self-hosted brand font (fonts/) ---- */
+@font-face{font-family:'Barlow';font-weight:300;font-style:normal;font-display:swap;src:url('fonts/Barlow-Light.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/Barlow-Regular.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:400;font-style:italic;font-display:swap;src:url('fonts/Barlow-Italic.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:500;font-style:normal;font-display:swap;src:url('fonts/Barlow-Medium.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:600;font-style:normal;font-display:swap;src:url('fonts/Barlow-SemiBold.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:700;font-style:normal;font-display:swap;src:url('fonts/Barlow-Bold.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:800;font-style:normal;font-display:swap;src:url('fonts/Barlow-ExtraBold.ttf') format('truetype');}
+@font-face{font-family:'Barlow';font-weight:900;font-style:normal;font-display:swap;src:url('fonts/Barlow-Black.ttf') format('truetype');}
+
+:root {
+  /* ---------- BRAND / CORPORATE PALETTE ---------- */
+  --azul-entel: #002EFF;      /* primary — titles, prices, links, CTAs, the parenthesis */
+  --naranjo-entel: #FF3D00;   /* accent — highlights, 5G, iconography, parenthesis */
+  --blanco: #FFFFFF;          /* predominant base of every piece */
+
+  /* ---------- SECONDARY PALETTE ---------- */
+  --verde-eco: #42E8B4;       /* offers, discounts, promotions */
+  --azul-negocios: #10069F;   /* B2B / Empresas & Corporaciones, formal tone */
+  --negro: #000000;           /* exceptional: tech, body text, Black Friday */
+
+  /* ---------- UI: TINTS & SURFACES ---------- */
+  --azul-claro: #F3F5FF;      /* light blue surface / soft fills behind blue */
+
+  /* ---------- UI: NEUTRAL / GREY SCALE ---------- */
+  --gris-010: #F7F7F7;        /* softest surface, hovers, delimiters */
+  --gris-100: #E9E9E9;        /* line elements, dividers */
+  --gris-200: #D7D7D7;        /* inactive / disabled elements */
+  --gris-600: #66686C;        /* secondary text, inactive */
+  --gris-900: #000000;        /* titles, body copy */
+
+  /* ---------- UI: SEMANTIC / FEEDBACK (semáforo) ---------- */
+  --exito: #22BE8D;           --exito-bg: #E6FFFA;   /* success */
+  --alerta: #F5B207;          --alerta-bg: #FEF9EC;  /* warning */
+  --error: #DB110A;           --error-bg: #FEF4F3;   /* error */
+
+  /* ---------- SEMANTIC ALIASES (foreground / background) ---------- */
+  --fg-1: var(--negro);       /* primary text — titles & body */
+  --fg-2: var(--gris-600);    /* secondary text */
+  --fg-3: var(--gris-200);    /* disabled text */
+  --fg-brand: var(--azul-entel);
+  --fg-on-brand: var(--blanco);
+
+  --bg-1: var(--blanco);      /* page base */
+  --bg-2: var(--gris-010);    /* raised / hover surface */
+  --bg-3: var(--azul-claro);  /* brand-tinted surface */
+  --bg-brand: var(--azul-entel);
+  --bg-brand-strong: var(--azul-negocios);
+
+  --line: var(--gris-100);    /* hairline borders */
+  --line-strong: var(--gris-200);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Barlow', system-ui, sans-serif;  /* titles & large text */
+  --font-ui: 'Inter', system-ui, sans-serif;        /* small text / body in dense UI */
+  --font-body: 'Barlow', system-ui, sans-serif;     /* body in comms */
+
+  /* ---------- TYPE WEIGHTS ---------- */
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+
+  /* ---------- RADII ----------
+     Entel UI is geometric with gentle softening. Icons use ~1–3px
+     vertex radii; buttons/cards use small-to-pill radii. */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- ELEVATION / SHADOW ----------
+     Soft, low-contrast, cool-neutral. No heavy drop shadows. */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(16, 6, 159, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 6, 159, 0.12);
+  --shadow-focus: 0 0 0 3px rgba(0, 46, 255, 0.25);
+
+  /* ---------- SPACING (4px base grid) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---------- ICON SIZES (24px grid) ---------- */
+  --icon-sm: 18px;
+  --icon-md: 24px;
+  --icon-lg: 36px;
+  --icon-xl: 48px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Hierarchy from the manual. Headlines are sentence case,
+   left-aligned, tracking 0, line-height 100–140%.
+   ============================================================ */
+
+.display, h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-size: 54px;
+  line-height: 1.0;          /* 54/54 per manual */
+  letter-spacing: 0;
+  color: var(--fg-1);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: 60px;
+  line-height: 1.0;
+  color: var(--azul-entel);  /* prices in Azul Entel */
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--fg-1);
+}
+
+.subtitle, h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: 22px;
+  line-height: 1.18;         /* 22/26 per manual */
+  color: var(--fg-1);
+}
+
+.lead {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--fg-1);
+}
+
+p, .body {
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--fg-1);
+}
+
+.body-sm, small {
+  font-family: var(--font-ui);  /* Inter for small sizes — legibility */
+  font-weight: var(--w-regular);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--fg-2);
+}
+
+.caption {
+  font-family: var(--font-ui);
+  font-weight: var(--w-medium);
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--fg-2);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: var(--w-semibold);
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--fg-1);
+}
+
+a, .link {
+  color: var(--azul-entel);
+  text-decoration: none;
+}
+a:hover, .link:hover { text-decoration: underline; }

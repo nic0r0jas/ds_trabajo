@@ -1,0 +1,183 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/app/**",
+              "ui_kits/empresas_web/**",
+              "ui_kits/personas_web/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Barlow|Inter))/i]",
+        "message": "Font not provided by the design system. Available: Barlow, Inter."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--alerta",
+      "--alerta-bg",
+      "--azul-claro",
+      "--azul-entel",
+      "--azul-negocios",
+      "--bg-1",
+      "--bg-2",
+      "--bg-3",
+      "--bg-brand",
+      "--bg-brand-strong",
+      "--blanco",
+      "--error",
+      "--error-bg",
+      "--exito",
+      "--exito-bg",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-brand",
+      "--fg-on-brand",
+      "--font-body",
+      "--font-display",
+      "--font-ui",
+      "--gris-010",
+      "--gris-100",
+      "--gris-200",
+      "--gris-600",
+      "--gris-900",
+      "--icon-lg",
+      "--icon-md",
+      "--icon-sm",
+      "--icon-xl",
+      "--line",
+      "--line-strong",
+      "--naranjo-entel",
+      "--negro",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xs",
+      "--shadow-focus",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--verde-eco",
+      "--w-bold",
+      "--w-medium",
+      "--w-regular",
+      "--w-semibold"
+    ],
+    "tokenKinds": {
+      "--azul-entel": "color",
+      "--naranjo-entel": "color",
+      "--blanco": "color",
+      "--verde-eco": "color",
+      "--azul-negocios": "color",
+      "--negro": "color",
+      "--azul-claro": "color",
+      "--gris-010": "color",
+      "--gris-100": "color",
+      "--gris-200": "color",
+      "--gris-600": "color",
+      "--gris-900": "color",
+      "--exito": "color",
+      "--exito-bg": "color",
+      "--alerta": "color",
+      "--alerta-bg": "color",
+      "--error": "color",
+      "--error-bg": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-brand": "color",
+      "--fg-on-brand": "color",
+      "--bg-1": "color",
+      "--bg-2": "color",
+      "--bg-3": "color",
+      "--bg-brand": "color",
+      "--bg-brand-strong": "color",
+      "--line": "color",
+      "--line-strong": "color",
+      "--font-display": "font",
+      "--font-ui": "font",
+      "--font-body": "font",
+      "--w-regular": "other",
+      "--w-medium": "other",
+      "--w-semibold": "other",
+      "--w-bold": "other",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-focus": "shadow",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--icon-sm": "spacing",
+      "--icon-md": "spacing",
+      "--icon-lg": "spacing",
+      "--icon-xl": "spacing"
+    },
+    "fontFamilies": [
+      "Barlow",
+      "Inter"
+    ]
+  }
+}

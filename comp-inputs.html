@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Component — Inputs" subtitle="Default, focus, error, disabled" viewport="700x230" -->
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:#fff;padding:24px 28px;color:var(--fg-1);display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+  .field label{display:block;font-family:var(--font-display);font-weight:600;font-size:13px;margin-bottom:6px}
+  .inp{width:100%;box-sizing:border-box;font-family:var(--font-ui);font-size:14px;padding:12px 14px;border:1.5px solid var(--gris-200);border-radius:var(--radius-sm);color:var(--fg-1);background:#fff}
+  .inp::placeholder{color:var(--gris-600)}
+  .inp.focus{border-color:var(--azul-entel);box-shadow:var(--shadow-focus);outline:none}
+  .inp.err{border-color:var(--error)}
+  .hint{font-family:var(--font-ui);font-size:11px;margin-top:5px}
+  .hint.e{color:var(--error)}
+  .hint.n{color:var(--gris-600)}
+</style></head><body>
+  <div class="field"><label>Nombre</label><input class="inp" placeholder="Escribe tu nombre"><div class="hint n">Te llamamos por tu nombre</div></div>
+  <div class="field"><label>Correo</label><input class="inp focus" value="hola@entel.cl"><div class="hint n">Campo activo</div></div>
+  <div class="field"><label>RUT</label><input class="inp err" value="12.345.678"><div class="hint e">Revisa el dígito verificador</div></div>
+  <div class="field"><label>Plan</label><input class="inp" value="Entel Power +" disabled style="background:var(--gris-010);color:var(--gris-600)"><div class="hint n">Deshabilitado</div></div>
+</body></html>
